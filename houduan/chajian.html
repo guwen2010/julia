@@ -1,0 +1,534 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第三方插件(模块开发) · magento重构汇总</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="longqi电商">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="varnish.html" />
+    
+    
+    <link rel="prev" href="guifan.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../jiagou.html">
+            
+                <a href="../jiagou.html">
+            
+                    
+                    站点架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../qianduan.html">
+            
+                <a href="../qianduan.html">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../qianduan/guifan.html">
+            
+                <a href="../qianduan/guifan.html">
+            
+                    
+                    前端规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../qianduan/webpack.html">
+            
+                <a href="../qianduan/webpack.html">
+            
+                    
+                    webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../qianduan/pc.html">
+            
+                <a href="../qianduan/pc.html">
+            
+                    
+                    pc端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../qianduan/wap.html">
+            
+                <a href="../qianduan/wap.html">
+            
+                    
+                    wap端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../houduan.html">
+            
+                <a href="../houduan.html">
+            
+                    
+                    后端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="guifan.html">
+            
+                <a href="guifan.html">
+            
+                    
+                    后端规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="chajian.html">
+            
+                <a href="chajian.html">
+            
+                    
+                    第三方插件(模块开发)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="varnish.html">
+            
+                <a href="varnish.html">
+            
+                    
+                    varnish
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../sql.html">
+            
+                <a href="../sql.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第三方插件(模块开发)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;"><b></b>&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;"><b></b>&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x4E09;&#x3001;&#x72EC;&#x7ACB;&#x5F00;&#x59CB;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;"><b></b>&#x4E09;&#x3001;&#x72EC;&#x7ACB;&#x5F00;&#x59CB;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x56DB;&#x3001;&#x91CD;&#x6784;&#x6A21;&#x5757;"><b></b>&#x56DB;&#x3001;&#x91CD;&#x6784;&#x6A21;&#x5757;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x8BC4;&#x8BBA;&#x6A21;&#x5757;"><b></b>1&#x3001;&#x8BC4;&#x8BBA;&#x6A21;&#x5757;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;ajax&#x5F02;&#x6B65;&#x5B8C;&#x6210;"><b></b>2&#x3001;ajax&#x5F02;&#x6B65;&#x5B8C;&#x6210;</a></li><li><span class="title-icon "></span><a href="#3&#x3001;&#x652F;&#x4ED8;&#x9875;&#x9762;"><b></b>3&#x3001;&#x652F;&#x4ED8;&#x9875;&#x9762;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x4E94;&#x3001;&#x542F;&#x7528;&#x4EA7;&#x54C1;&#xFF0C;&#x5206;&#x7C7B;flat&#x6A21;&#x578B;"><b></b>&#x4E94;&#x3001;&#x542F;&#x7528;&#x4EA7;&#x54C1;&#xFF0C;&#x5206;&#x7C7B;flat&#x6A21;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x516D;&#x3001;&#x4FEE;&#x6539;xml&#xFF0C;&#x652F;&#x6301;&#x5E95;&#x90E8;&#x79FB;&#x9664;cssjs&#x529F;&#x80FD;&#x6682;&#x672A;&#x4F7F;&#x7528;"><b></b>&#x516D;&#x3001;&#x4FEE;&#x6539;xml&#xFF0C;&#x652F;&#x6301;&#x5E95;&#x90E8;&#x79FB;&#x9664;css,js(&#x529F;&#x80FD;&#x6682;&#x672A;&#x4F7F;&#x7528;)</a></li><li><span class="title-icon "></span><a href="#&#x4E03;&#x3001;&#x901A;&#x8FC7;nginx-lua&#x652F;&#x6301;&#x5C06;&#x56FE;&#x7247;&#x52A8;&#x6001;&#x4FEE;&#x6539;webp&#x683C;&#x5F0F;"><b></b>&#x4E03;&#x3001;&#x901A;&#x8FC7;nginx-lua&#x652F;&#x6301;&#x5C06;&#x56FE;&#x7247;&#x52A8;&#x6001;&#x4FEE;&#x6539;webp&#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x516B;&#x3001;minify&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;html&#x538B;&#x7F29;&#x64CD;&#x4F5C;"><b></b>&#x516B;&#x3001;minify&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;html&#x538B;&#x7F29;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x4E5D;&#x3001;varnish&#x5B8C;&#x6210;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;"><b></b>&#x4E5D;&#x3001;varnish&#x5B8C;&#x6210;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x5341;&#x3001;cssjs&#x540C;&#x65F6;&#x652F;&#x6301;min&#x53CA;&#x5E38;&#x89C4;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;"><b></b>&#x5341;&#x3001;css,js&#x540C;&#x65F6;&#x652F;&#x6301;min&#x53CA;&#x5E38;&#x89C4;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x5341;&#x4E00;&#x3001;&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;author&#x738B;&#x4F73;&#x5EB7;&#xFF09;"><b></b>&#x5341;&#x4E00;&#x3001;&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;author:&#x738B;&#x4F73;&#x5EB7;&#xFF09;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;"><b></b>1&#x3001;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x9996;&#x9875;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x8C03;&#x6574;"><b></b>2&#x3001;&#x9996;&#x9875;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x8C03;&#x6574;</a></li><li><span class="title-icon "></span><a href="#3&#x3001;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x680F;&#x76EE;&#x4EA7;&#x54C1;&#x65B9;&#x6CD5;&#x91CD;&#x6784;"><b></b>3&#x3001;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x680F;&#x76EE;&#x4EA7;&#x54C1;&#x65B9;&#x6CD5;&#x91CD;&#x6784;</a></li><li><span class="title-icon "></span><a href="#4&#x3001;&#x6536;&#x85CF;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x6807;&#x6CE8;"><b></b>4&#x3001;&#x6536;&#x85CF;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x6807;&#x6CE8;</a></li><li><span class="title-icon "></span><a href="#5&#x3001;&#x914D;&#x5408;varnish&#x7F13;&#x5B58;&#x673A;&#x5236;&#x914D;&#x7F6E;"><b></b>5&#x3001;&#x914D;&#x5408;varnish&#x7F13;&#x5B58;&#x673A;&#x5236;&#x914D;&#x7F6E;</a></li></ul><li><span class="title-icon "></span><a href="#--"><b></b>   </a></li><ul><li><span class="title-icon "></span><a href="#6&#x3001;&#x7FFB;&#x9875;&#x901A;&#x8FC7;ajax&#x5F02;&#x6B65;&#x52A0;&#x8F7D;"><b></b>6&#x3001;&#x7FFB;&#x9875;&#x901A;&#x8FC7;ajax&#x5F02;&#x6B65;&#x52A0;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#7&#x3001;&#x624B;&#x673A;&#x7AEF;&#x5C5E;&#x6027;&#x7B5B;&#x9009;"><b></b>7&#x3001;&#x624B;&#x673A;&#x7AEF;&#x5C5E;&#x6027;&#x7B5B;&#x9009;</a></li></ul></ul></ul></div><a href="#&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;"><a name="&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x63D2;&#x4EF6;</h1>
+<pre><code>   1&#x3001;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5173;&#x95ED;&#xFF1A;
+    &#x914D;&#x7F6E;&#x4EA7;&#x54C1;&#x6A21;&#x5757;
+    Mage_Rss&#xFF0C;
+    Mage_Authorizenet&#xFF0C;
+    Mage_GiftMessage&#xFF0C;
+    Mage_ConfigurableSwatches&#xFF0C;
+    Mage_Downloadable&#xFF0C;
+    Mage_Weee&#xFF0C;
+    Phoenix_Moneybookers
+    2&#x3001;&#x540E;&#x7AEF;&#x5173;&#x95ED;&#xFF1A;
+    Mage_AdminNotification
+    Mage_Authorizenet
+    Mage_Backup
+    Mage_Bundle
+    Mage_ConfigurableSwatches
+    Mage_Downloadable
+    Mage_PaypalUk
+    Mage_Rss
+    Mage_Weee
+    Mage_XmlConnect
+    Phoenix_Moneybookers
+</code></pre><h1 id="&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;"><a name="&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;</h1>
+<pre><code> 1&#x3001;Firecheckout &#x9700;&#x8981;&#x8F83;&#x5927;&#x8C03;&#x6574;
+ 2&#x3001;Mw(&#x79EF;&#x5206;)      &#x9700;&#x8981;&#x8C03;&#x6574;&#x4F18;&#x5316;
+ 3&#x3001;Aschroder--&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x63D2;&#x4EF6;smtp        
+ 4&#x3001;AW--blog
+ 5&#x3001;Inic--faq
+ 6&#x3001;Hetinfoway--video    
+ 7&#x3001;aoe---cron            
+ 8&#x3001;DigitalPianism--ajax login (&#x4FDD;&#x7559;&#x529F;&#x80FD;)    
+ 9&#x3001;RocketWeb--google shipping        
+ 10&#x3001;Zestard--&#x5BA2;&#x6237;&#x5C5E;&#x6027;&#x540E;&#x53F0;&#x81EA;&#x5B9A;&#x4E49;    
+ 11&#x3001;&#x8BA2;&#x5355;&#x5F02;&#x6B65;&#x6D4B;&#x8BD5;        
+ 12&#x3001;Vstudio---menu(&#x81EA;&#x5B9A;&#x4E49;&#x5BFC;&#x822A;)
+ 13&#x3001;Apptrian--minify
+ 14&#x3001;Fishpig--wordpress
+ 15&#x3001;Imsc--refersion
+ 16&#x3001;Inchoo--SocialConnect
+ 17&#x3001;Nexcessnet--Turpentine
+</code></pre><h1 id="&#x4E09;&#x3001;&#x72EC;&#x7ACB;&#x5F00;&#x59CB;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;"><a name="&#x4E09;&#x3001;&#x72EC;&#x7ACB;&#x5F00;&#x59CB;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x72EC;&#x7ACB;&#x5F00;&#x59CB;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E09;&#x3001;&#x72EC;&#x7ACB;&#x5F00;&#x59CB;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;" class="plugin-anchor" href="#&#x4E09;&#x3001;&#x72EC;&#x7ACB;&#x5F00;&#x59CB;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x72EC;&#x7ACB;&#x5F00;&#x59CB;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;</h1>
+<pre><code> 1&#x3001;wholesale
+ 2&#x3001;staylooks
+ 3&#x3001;luckydraw            
+ 4&#x3001;paypal error    
+ 5&#x3001;banner
+ 6&#x3001;sms
+</code></pre><h1 id="&#x56DB;&#x3001;&#x91CD;&#x6784;&#x6A21;&#x5757;"><a name="&#x56DB;&#x3001;&#x91CD;&#x6784;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x3001;&#x91CD;&#x6784;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x56DB;&#x3001;&#x91CD;&#x6784;&#x6A21;&#x5757;" class="plugin-anchor" href="#&#x56DB;&#x3001;&#x91CD;&#x6784;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x91CD;&#x6784;&#x6A21;&#x5757;</h1>
+<h3 id="1&#x3001;&#x8BC4;&#x8BBA;&#x6A21;&#x5757;"><a name="1&#x3001;&#x8BC4;&#x8BBA;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x8BC4;&#x8BBA;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;&#x8BC4;&#x8BBA;&#x6A21;&#x5757;" class="plugin-anchor" href="#1&#x3001;&#x8BC4;&#x8BBA;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x8BC4;&#x8BBA;&#x6A21;&#x5757;</h3>
+<pre><code> &#x4E3B;&#x8981;&#x8BB2;rating,&#x79FB;&#x52A8;&#x5230;&#x8BC4;&#x8BBA;&#x8BE6;&#x60C5;&#x8868;&#xFF0C;&#x540C;&#x65F6;&#x79FB;&#x9664;&#x591A;&#x4F59;&#x7684;&#x5B57;&#x6BB5;
+ &#x79FB;&#x9664;&#x8868;review_author_ips,review_helpful,review_proscons,rview_proscons_store
+ Review_detail &#x79FB;&#x9664;&#x5B57;&#x6BB5;&#xFF1A;Cons,pros,body_type,sizing,location,age,height
+</code></pre><h3 id="2&#x3001;ajax&#x5F02;&#x6B65;&#x5B8C;&#x6210;"><a name="2&#x3001;ajax&#x5F02;&#x6B65;&#x5B8C;&#x6210;" class="anchor-navigation-ex-anchor" href="#2&#x3001;ajax&#x5F02;&#x6B65;&#x5B8C;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;ajax&#x5F02;&#x6B65;&#x5B8C;&#x6210;" class="plugin-anchor" href="#2&#x3001;ajax&#x5F02;&#x6B65;&#x5B8C;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;ajax&#x5F02;&#x6B65;&#x5B8C;&#x6210;</h3>
+<pre><code> &#x6240;&#x6709;&#x7FFB;&#x9875;&#xFF0C;&#x5C5E;&#x6027;&#x7B5B;&#x9009;&#xFF0C;&#x52A0;&#x8D2D;&#xFF0C;&#x8D2D;&#x7269;&#x8F66;(&#x5220;&#x9664;&#xFF0C;&#x66F4;&#x65B0;)&#xFF0C;&#x652F;&#x4ED8;&#x9875;&#x9762;
+</code></pre><h3 id="3&#x3001;&#x652F;&#x4ED8;&#x9875;&#x9762;"><a name="3&#x3001;&#x652F;&#x4ED8;&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x652F;&#x4ED8;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#x3001;&#x652F;&#x4ED8;&#x9875;&#x9762;" class="plugin-anchor" href="#3&#x3001;&#x652F;&#x4ED8;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x652F;&#x4ED8;&#x9875;&#x9762;</h3>
+<pre><code> &#x652F;&#x4ED8;&#x9875;&#x9762;&#x7684;&#x6240;&#x6709;&#x903B;&#x8F91;&#x91CD;&#x65B0;&#x68B3;&#x7406;&#x91CD;&#x5199;&#xFF08;&#x540E;&#x7AEF;&#x57FA;&#x4E8E;firecheckout&#x65B9;&#x6CD5;&#xFF09;
+ &#x79FB;&#x9664;&#x5B57;&#x6BB5; tm_field1 &#xFF0C;tm_field2 &#xFF0C;tm_field3&#xFF0C;tm_field4&#xFF0C;tm_field5,fake_id ;
+ &#x79FB;&#x9664;&#x8868;tm_orderattachment;
+
+ tm  Additional  &#x79FB;&#x9664;
+ firecheckout_geoip &#x529F;&#x80FD;&#x79FB;&#x9664;
+ Address Verification (USPS) &#x529F;&#x80FD;&#x79FB;&#x9664;
+ &#x5BF9;&#x5E94;&#x5730;&#x5740;&#x680F;&#x903B;&#x8F91;&#x8FDB;&#x884C;&#x68B3;&#x7406;&#xFF1A;
+</code></pre><p><img src="../images/zhifu.png"></p>
+<h1 id="&#x4E94;&#x3001;&#x542F;&#x7528;&#x4EA7;&#x54C1;&#xFF0C;&#x5206;&#x7C7B;flat&#x6A21;&#x578B;"><a name="&#x4E94;&#x3001;&#x542F;&#x7528;&#x4EA7;&#x54C1;&#xFF0C;&#x5206;&#x7C7B;flat&#x6A21;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x4E94;&#x3001;&#x542F;&#x7528;&#x4EA7;&#x54C1;&#xFF0C;&#x5206;&#x7C7B;flat&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E94;&#x3001;&#x542F;&#x7528;&#x4EA7;&#x54C1;&#xFF0C;&#x5206;&#x7C7B;flat&#x6A21;&#x578B;" class="plugin-anchor" href="#&#x4E94;&#x3001;&#x542F;&#x7528;&#x4EA7;&#x54C1;&#xFF0C;&#x5206;&#x7C7B;flat&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x542F;&#x7528;&#x4EA7;&#x54C1;&#xFF0C;&#x5206;&#x7C7B;flat&#x6A21;&#x578B;</h1>
+<h1 id="&#x516D;&#x3001;&#x4FEE;&#x6539;xml&#xFF0C;&#x652F;&#x6301;&#x5E95;&#x90E8;&#x79FB;&#x9664;cssjs&#x529F;&#x80FD;&#x6682;&#x672A;&#x4F7F;&#x7528;"><a name="&#x516D;&#x3001;&#x4FEE;&#x6539;xml&#xFF0C;&#x652F;&#x6301;&#x5E95;&#x90E8;&#x79FB;&#x9664;cssjs&#x529F;&#x80FD;&#x6682;&#x672A;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x516D;&#x3001;&#x4FEE;&#x6539;xml&#xFF0C;&#x652F;&#x6301;&#x5E95;&#x90E8;&#x79FB;&#x9664;cssjs&#x529F;&#x80FD;&#x6682;&#x672A;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x516D;&#x3001;&#x4FEE;&#x6539;xml&#xFF0C;&#x652F;&#x6301;&#x5E95;&#x90E8;&#x79FB;&#x9664;cssjs&#x529F;&#x80FD;&#x6682;&#x672A;&#x4F7F;&#x7528;" class="plugin-anchor" href="#&#x516D;&#x3001;&#x4FEE;&#x6539;xml&#xFF0C;&#x652F;&#x6301;&#x5E95;&#x90E8;&#x79FB;&#x9664;cssjs&#x529F;&#x80FD;&#x6682;&#x672A;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516D;&#x3001;&#x4FEE;&#x6539;xml&#xFF0C;&#x652F;&#x6301;&#x5E95;&#x90E8;&#x79FB;&#x9664;css,js(&#x529F;&#x80FD;&#x6682;&#x672A;&#x4F7F;&#x7528;)</h1>
+<h1 id="&#x4E03;&#x3001;&#x901A;&#x8FC7;nginx-lua&#x652F;&#x6301;&#x5C06;&#x56FE;&#x7247;&#x52A8;&#x6001;&#x4FEE;&#x6539;webp&#x683C;&#x5F0F;"><a name="&#x4E03;&#x3001;&#x901A;&#x8FC7;nginx-lua&#x652F;&#x6301;&#x5C06;&#x56FE;&#x7247;&#x52A8;&#x6001;&#x4FEE;&#x6539;webp&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x4E03;&#x3001;&#x901A;&#x8FC7;nginx-lua&#x652F;&#x6301;&#x5C06;&#x56FE;&#x7247;&#x52A8;&#x6001;&#x4FEE;&#x6539;webp&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E03;&#x3001;&#x901A;&#x8FC7;nginx-lua&#x652F;&#x6301;&#x5C06;&#x56FE;&#x7247;&#x52A8;&#x6001;&#x4FEE;&#x6539;webp&#x683C;&#x5F0F;" class="plugin-anchor" href="#&#x4E03;&#x3001;&#x901A;&#x8FC7;nginx-lua&#x652F;&#x6301;&#x5C06;&#x56FE;&#x7247;&#x52A8;&#x6001;&#x4FEE;&#x6539;webp&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E03;&#x3001;&#x901A;&#x8FC7;nginx-lua&#x652F;&#x6301;&#x5C06;&#x56FE;&#x7247;&#x52A8;&#x6001;&#x4FEE;&#x6539;webp&#x683C;&#x5F0F;</h1>
+<h1 id="&#x516B;&#x3001;minify&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;html&#x538B;&#x7F29;&#x64CD;&#x4F5C;"><a name="&#x516B;&#x3001;minify&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;html&#x538B;&#x7F29;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x516B;&#x3001;minify&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;html&#x538B;&#x7F29;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x516B;&#x3001;minify&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;html&#x538B;&#x7F29;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x516B;&#x3001;minify&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;html&#x538B;&#x7F29;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516B;&#x3001;minify&#x7EC4;&#x4EF6;&#x5B8C;&#x6210;html&#x538B;&#x7F29;&#x64CD;&#x4F5C;</h1>
+<h1 id="&#x4E5D;&#x3001;varnish&#x5B8C;&#x6210;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;"><a name="&#x4E5D;&#x3001;varnish&#x5B8C;&#x6210;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x4E5D;&#x3001;varnish&#x5B8C;&#x6210;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E5D;&#x3001;varnish&#x5B8C;&#x6210;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;" class="plugin-anchor" href="#&#x4E5D;&#x3001;varnish&#x5B8C;&#x6210;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E5D;&#x3001;varnish&#x5B8C;&#x6210;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;</h1>
+<h1 id="&#x5341;&#x3001;cssjs&#x540C;&#x65F6;&#x652F;&#x6301;min&#x53CA;&#x5E38;&#x89C4;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;"><a name="&#x5341;&#x3001;cssjs&#x540C;&#x65F6;&#x652F;&#x6301;min&#x53CA;&#x5E38;&#x89C4;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5341;&#x3001;cssjs&#x540C;&#x65F6;&#x652F;&#x6301;min&#x53CA;&#x5E38;&#x89C4;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5341;&#x3001;cssjs&#x540C;&#x65F6;&#x652F;&#x6301;min&#x53CA;&#x5E38;&#x89C4;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;" class="plugin-anchor" href="#&#x5341;&#x3001;cssjs&#x540C;&#x65F6;&#x652F;&#x6301;min&#x53CA;&#x5E38;&#x89C4;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5341;&#x3001;css,js&#x540C;&#x65F6;&#x652F;&#x6301;min&#x53CA;&#x5E38;&#x89C4;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;</h1>
+<h1 id="&#x5341;&#x4E00;&#x3001;&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;author&#x738B;&#x4F73;&#x5EB7;&#xFF09;"><a name="&#x5341;&#x4E00;&#x3001;&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;author&#x738B;&#x4F73;&#x5EB7;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x5341;&#x4E00;&#x3001;&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;author&#x738B;&#x4F73;&#x5EB7;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5341;&#x4E00;&#x3001;&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;author&#x738B;&#x4F73;&#x5EB7;&#xFF09;" class="plugin-anchor" href="#&#x5341;&#x4E00;&#x3001;&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;author&#x738B;&#x4F73;&#x5EB7;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5341;&#x4E00;&#x3001;&#x5F00;&#x53D1;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;author:&#x738B;&#x4F73;&#x5EB7;&#xFF09;</h1>
+<h3 id="1&#x3001;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;"><a name="1&#x3001;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#1&#x3001;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;" class="plugin-anchor" href="#1&#x3001;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;xml&#x5E03;&#x5C40;&#x6587;&#x4EF6;</h3>
+<pre><code> &#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x680F;&#x76EE;&#x5E03;&#x5C40;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x53F0;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF0C;&#x9700;&#x5728;
+ xml&#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;
+ &#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x540E;&#x53F0;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x65E0;&#x9700;&#x8FDB;&#x884C;&#x6B64;&#x914D;&#x7F6E;&#xFF0C;&#x76F4;&#x63A5;&#x5728;
+ xml&#x4E2D;&#x914D;&#x7F6E;&#x5BF9;&#x5E94;&#x7684;&#x5E03;&#x5C40;&#x6A21;&#x677F;&#x5373;&#x53EF;&#x3002;
+D:\web\julianew\app\code\local\Longqi\Public\etc\config.xml
+</code></pre><p><img src="../images/bujuwenjian.png"> 
+<img src="../images/bujuwenjian2.png"> </p>
+<hr>
+<h3 id="2&#x3001;&#x9996;&#x9875;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x8C03;&#x6574;"><a name="2&#x3001;&#x9996;&#x9875;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x8C03;&#x6574;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x9996;&#x9875;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x8C03;&#x6574;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;&#x9996;&#x9875;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x8C03;&#x6574;" class="plugin-anchor" href="#2&#x3001;&#x9996;&#x9875;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x8C03;&#x6574;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x9996;&#x9875;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x8C03;&#x6574;</h3>
+<pre><code> &#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x9996;&#x9875;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5728;&#x540E;&#x53F0;cms-&gt;page&#x4E2D;&#x7684;&#x5355;&#x9875;&#x586B;&#x5199;&#x7684;,&#x56E0;
+ &#x4E0D;&#x5229;&#x4E8E;&#x540E;&#x671F;&#x7EF4;&#x62A4;&#xFF0C;&#x6545;&#x5C06;&#x5176;&#x91CD;&#x5199;&#x81F3;phtml&#x9875;&#x9762;&#x4E2D;&#x3002;
+ D:\web\julianew\app\design\frontend\longqi\pc\layout\local.xml
+</code></pre><p><img src="../images/2-1.png"></p>
+<hr>
+<h3 id="3&#x3001;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x680F;&#x76EE;&#x4EA7;&#x54C1;&#x65B9;&#x6CD5;&#x91CD;&#x6784;"><a name="3&#x3001;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x680F;&#x76EE;&#x4EA7;&#x54C1;&#x65B9;&#x6CD5;&#x91CD;&#x6784;" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x680F;&#x76EE;&#x4EA7;&#x54C1;&#x65B9;&#x6CD5;&#x91CD;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#x3001;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x680F;&#x76EE;&#x4EA7;&#x54C1;&#x65B9;&#x6CD5;&#x91CD;&#x6784;" class="plugin-anchor" href="#3&#x3001;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x680F;&#x76EE;&#x4EA7;&#x54C1;&#x65B9;&#x6CD5;&#x91CD;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x680F;&#x76EE;&#x4EA7;&#x54C1;&#x65B9;&#x6CD5;&#x91CD;&#x6784;</h3>
+<pre><code> &#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x5728;block&#x4E2D;&#x8C03;&#x53D6;&#x5206;&#x7C7B;&#x662F;&#x6CA1;&#x6709;&#x6570;&#x91CF;&#x9650;&#x5236;&#x7684;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;
+ &#x6CD5;&#x8FDB;&#x884C;&#x6570;&#x91CF;&#x9650;&#x5236;
+ D:\web\julianew\app\code\local\Mage\Catalog\Block\Product\List.php
+</code></pre><p><img src="../images/3-1.png"></p>
+<hr>
+<h3 id="4&#x3001;&#x6536;&#x85CF;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x6807;&#x6CE8;"><a name="4&#x3001;&#x6536;&#x85CF;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x6807;&#x6CE8;" class="anchor-navigation-ex-anchor" href="#4&#x3001;&#x6536;&#x85CF;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x6807;&#x6CE8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="4&#x3001;&#x6536;&#x85CF;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x6807;&#x6CE8;" class="plugin-anchor" href="#4&#x3001;&#x6536;&#x85CF;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x6807;&#x6CE8;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;&#x6536;&#x85CF;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x6807;&#x6CE8;</h3>
+<pre><code> &#x767B;&#x5F55;&#x60C5;&#x51B5;&#x4E0B;&#x5DF2;&#x6536;&#x85CF;&#x7684;&#x4EA7;&#x54C1;&#x7EA2;&#x5FC3;&#x7684;&#x663E;&#x793A;&#xFF0C;&#x56E0;varnish&#x7F13;&#x5B58;&#x5F71;&#x54CD;&#x6545;
+ &#x4E0D;&#x80FD;&#x7528;&#x4F7F;&#x7528;PHP&#x5BF9;&#x5176;&#x5224;&#x65AD;&#xFF0C;&#x76D1;&#x542C;&#x5BA2;&#x6237;&#x767B;&#x5F55;&#x6210;&#x529F;&#xFF0C;&#x5C06;&#x5BA2;&#x6237;&#x5DF2;&#x6536;&#x85CF;&#x7684;
+ &#x4EA7;&#x54C1;ID&#x5B58;&#x50A8;&#x5230;COOKIE&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x5728;js&#x4E2D;&#x8BFB;&#x53D6;cookie&#x8FDB;&#x884C;&#x7EA2;&#x5FC3;&#x5C55;&#x793A;&#x3002;
+</code></pre><p><img src="../images/4-1.png">
+<img src="../images/4-2.png"></p>
+<hr>
+<h3 id="5&#x3001;&#x914D;&#x5408;varnish&#x7F13;&#x5B58;&#x673A;&#x5236;&#x914D;&#x7F6E;"><a name="5&#x3001;&#x914D;&#x5408;varnish&#x7F13;&#x5B58;&#x673A;&#x5236;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#5&#x3001;&#x914D;&#x5408;varnish&#x7F13;&#x5B58;&#x673A;&#x5236;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="5&#x3001;&#x914D;&#x5408;varnish&#x7F13;&#x5B58;&#x673A;&#x5236;&#x914D;&#x7F6E;" class="plugin-anchor" href="#5&#x3001;&#x914D;&#x5408;varnish&#x7F13;&#x5B58;&#x673A;&#x5236;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>5&#x3001;&#x914D;&#x5408;varnish&#x7F13;&#x5B58;&#x673A;&#x5236;&#x914D;&#x7F6E;</h3>
+<pre><code> &#x56E0;varnish&#x7F13;&#x5B58;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x662F;&#x5168;&#x5C40;&#x7F13;&#x5B58;&#xFF0C;&#x7136;&#x800C;&#x4E00;&#x4E9B;&#x4E0D;&#x9700;&#x8981;&#x7F13;
+ &#x5B58;&#x7684;block&#x6216;controller&#x662F;&#x9700;&#x8981;&#x5728;xml&#x4E2D;&#x6307;&#x5B9A;&#x4E0D;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#x7684;&#xFF0C;&#x5982;
+ &#x5934;&#x90E8;&#x767B;&#x5F55;&#x72B6;&#x6001;&#xFF0C;&#x5934;&#x90E8;&#x8D2D;&#x7269;&#x8F66;&#x3002;
+</code></pre><p><img src="../images/5-1.png">     </p>
+<p><font color="red">&#x6CE8;&#xFF1A;&#x6307;&#x5B9A;&#x4E0D;&#x7F13;&#x5B58;block&#x7684;xml&#x9700;&#x653E;&#x5728;default&#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</font></p>
+<h2 id="--"><a name="--" class="anchor-navigation-ex-anchor" href="#--"><i class="fa fa-link" aria-hidden="true"></i></a><a name="--" class="plugin-anchor" href="#--"><i class="fa fa-link" aria-hidden="true"></i></a><img src="../images/5-2.png">   </h2>
+<h3 id="6&#x3001;&#x7FFB;&#x9875;&#x901A;&#x8FC7;ajax&#x5F02;&#x6B65;&#x52A0;&#x8F7D;"><a name="6&#x3001;&#x7FFB;&#x9875;&#x901A;&#x8FC7;ajax&#x5F02;&#x6B65;&#x52A0;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#6&#x3001;&#x7FFB;&#x9875;&#x901A;&#x8FC7;ajax&#x5F02;&#x6B65;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="6&#x3001;&#x7FFB;&#x9875;&#x901A;&#x8FC7;ajax&#x5F02;&#x6B65;&#x52A0;&#x8F7D;" class="plugin-anchor" href="#6&#x3001;&#x7FFB;&#x9875;&#x901A;&#x8FC7;ajax&#x5F02;&#x6B65;&#x52A0;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>6&#x3001;&#x7FFB;&#x9875;&#x901A;&#x8FC7;ajax&#x5F02;&#x6B65;&#x52A0;&#x8F7D;</h3>
+<pre><code> &#x5206;&#x9875;&#x6570;&#x636E;&#x6539;&#x4E3A;ajax&#x8BF7;&#x6C42;&#xFF0C;&#x539F;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x5206;&#x9875;&#x94FE;&#x63A5;&#x4E0D;&#x53D8;&#x6539;&#x4E3A;
+ ajax&#x65B9;&#x5F0F;&#x5BF9;&#x5176;&#x94FE;&#x63A5;&#x8FDB;&#x884C;&#x8BF7;&#x6C42;&#xFF0C;&#x5728;&#x540E;&#x53F0;&#x83B7;&#x53D6;block&#x5C06;phtml&#x5185;&#x5BB9;&#x8F6C;
+ &#x6362;&#x4E3A;json&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x8FD4;&#x56DE;&#x3002;
+ &#x6CE8;&#xFF1A;&#x56E0;varnish&#x7F13;&#x5B58;&#x4F1A;&#x6839;&#x636E;&#x94FE;&#x63A5;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#xFF0C;&#x6240;&#x4EE5;ajax&#x8BF7;&#x6C42;&#x4E00;&#x5B9A;&#x8981;&#x6DFB;&#x52A0;&#x53C2;&#x6570;&#x4E0E;&#x975E;ajax&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x533A;&#x5206;
+</code></pre><p><img src="../images/6-1.png"><br><img src="../images/6-2.png"><br><img src="../images/6-3.png"><br><img src="../images/6-4.png">   </p>
+<hr>
+<h3 id="7&#x3001;&#x624B;&#x673A;&#x7AEF;&#x5C5E;&#x6027;&#x7B5B;&#x9009;"><a name="7&#x3001;&#x624B;&#x673A;&#x7AEF;&#x5C5E;&#x6027;&#x7B5B;&#x9009;" class="anchor-navigation-ex-anchor" href="#7&#x3001;&#x624B;&#x673A;&#x7AEF;&#x5C5E;&#x6027;&#x7B5B;&#x9009;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="7&#x3001;&#x624B;&#x673A;&#x7AEF;&#x5C5E;&#x6027;&#x7B5B;&#x9009;" class="plugin-anchor" href="#7&#x3001;&#x624B;&#x673A;&#x7AEF;&#x5C5E;&#x6027;&#x7B5B;&#x9009;"><i class="fa fa-link" aria-hidden="true"></i></a>7&#x3001;&#x624B;&#x673A;&#x7AEF;&#x5C5E;&#x6027;&#x7B5B;&#x9009;</h3>
+<pre><code> M&#x7AEF;&#x5206;&#x7C7B;&#x5217;&#x8868;&#x4E0B;&#x62C9;&#x5C5E;&#x6027;&#x7B5B;&#x9009;&#x79FB;&#x81F3;&#x540E;&#x53F0;&#x8FDB;&#x884C;&#x91CD;&#x7F6E;
+</code></pre><p><img src="../images/7-1.png"><br><img src="../images/7-2.png">
+<img src="../images/7-3.png"></p>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="guifan.html" class="navigation navigation-prev " aria-label="Previous page: 后端规范">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="varnish.html" class="navigation navigation-next " aria-label="Next page: varnish">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第三方插件(模块开发)","level":"1.4.2","depth":2,"next":{"title":"varnish","level":"1.4.3","depth":2,"path":"houduan/varnish.md","ref":"./houduan/varnish.md","articles":[]},"previous":{"title":"后端规范","level":"1.4.1","depth":2,"path":"houduan/guifan.md","ref":"./houduan/guifan.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","-github","-github-buttons","-donate","sharing-plus","anchor-navigation-ex","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/Blankj"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","title":"","button":"赞赏","alipayText":" "},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"Blankj","repo":"glory","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"longqi电商","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"magento重构汇总","language":"zh-hans","gitbook":"3.2.3","description":"对julia重构应用的新内容及遇到的问题进行汇总"},"file":{"path":"houduan/chajian.md","mtime":"2020-02-06T11:43:44.805Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-07T01:50:08.420Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
